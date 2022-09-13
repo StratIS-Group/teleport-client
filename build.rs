@@ -96,7 +96,7 @@ fn gen_flutter_rust_bridge() {
         ..Default::default()
     };
     // run fbr_codegen
-    lib_flutter_rust_bridge_codegen::frb_codegen(opts).unwrap();
+    //lib_flutter_rust_bridge_codegen::frb_codegen(opts).unwrap();
 }
 
 fn main() {
@@ -109,12 +109,12 @@ fn main() {
     gen_flutter_rust_bridge();
     //     return;
     // }
-    #[cfg(all(windows, feature = "with_rc"))]
-    build_rc_source();
-    #[cfg(all(windows, feature = "inline"))]
-    build_manifest();
+    //#[cfg(all(windows, feature = "with_rc"))]
+    //build_rc_source();
+    //#[cfg(all(windows, feature = "inline"))]
+    //build_manifest();
     #[cfg(windows)]
     build_windows();
-    #[cfg(target_os = "macos")]
-    println!("cargo:rustc-link-lib=framework=ApplicationServices");
+    //#[cfg(target_os = "macos")]
+    //println!("cargo:rustc-link-lib=framework=ApplicationServices");
 }
