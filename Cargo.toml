@@ -1,14 +1,14 @@
 [package]
-name = "rustdesk"
+name = "teleport"
 version = "1.2.0"
 authors = ["rustdesk <info@rustdesk.com>"]
 edition = "2021"
 build= "build.rs"
 description = "A remote control software."
-default-run = "rustdesk"
+default-run = "teleport"
 
 [lib]
-name = "librustdesk"
+name = "libteleport"
 crate-type = ["cdylib", "staticlib", "rlib"]
 
 [[bin]]
@@ -31,6 +31,7 @@ hwcodec = ["scrap/hwcodec"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+winres = "0.1"
 whoami = "1.2"
 scrap = { path = "libs/scrap", features = ["wayland"] }
 hbb_common = { path = "libs/hbb_common" }
@@ -120,9 +121,9 @@ flutter_rust_bridge = { git = "https://github.com/SoLongAndThanksForAllThePizza/
 members = ["libs/scrap", "libs/hbb_common", "libs/enigo", "libs/clipboard", "libs/virtual_display", "libs/simple_rc"]
 
 [package.metadata.winres]
-LegalCopyright = "Copyright © 2022 Purslane, Inc."
+LegalCopyright = "Copyright © 2022 StratIS Group"
 # this FileDescription overrides package.description
-FileDescription = "RustDesk"
+FileDescription = "TeleportClient"
 
 [target.'cfg(target_os="windows")'.build-dependencies]
 winres = "0.1"
@@ -138,8 +139,8 @@ flutter_rust_bridge_codegen = { git = "https://github.com/SoLongAndThanksForAllT
 hound = "3.4"
 
 [package.metadata.bundle]
-name = "RustDesk"
-identifier = "com.carriez.rustdesk"
+name = "Teleport Client"
+identifier = "com.stratisgroup.teleport"
 icon = ["32x32.png", "128x128.png", "128x128@2x.png"]
 deb_depends = ["libgtk-3-0", "libxcb-randr0", "libxdo3", "libxfixes3", "libxcb-shape0", "libxcb-xfixes0", "libasound2", "libsystemd0", "pulseaudio", "python3-pip", "curl"]
 osx_minimum_system_version = "10.14"

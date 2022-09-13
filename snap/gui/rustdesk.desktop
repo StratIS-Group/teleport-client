@@ -4,7 +4,7 @@ Name=RustDesk
 GenericName=Remote Desktop
 Comment=Remote Desktop
 Exec=rustdesk %u
-Icon=${SNAP}/meta/gui/rustdesk.png
+Icon=${SNAP}/meta/gui/128x128@2x.png
 Terminal=false
 Type=Application
 StartupNotify=true
@@ -16,4 +16,3 @@ X-Desktop-File-Install-Version=0.23
 
 [Desktop Action new-window]
 Name=Open a New Window
-

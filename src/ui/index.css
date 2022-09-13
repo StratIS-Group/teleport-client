@@ -335,7 +335,7 @@ div.install-me, div.trust-me {
     margin-top: 0.5em;
     padding: 20px;
     color: white;
-    background: linear-gradient(left,#e242bc,#f4727c);
+    background: linear-gradient(top, #01a0f5,#28d18a);
 }
 
 div.trust-me > div:nth-child(1),
@@ -417,4 +417,3 @@ li:disabled, li:disabled:hover {
     color: color(lighter-text);
     background: color(menu);
 }
-

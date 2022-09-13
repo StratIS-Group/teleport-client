@@ -1,9 +1,9 @@
 // Specify the Windows subsystem to eliminate console window.
 // Requires Rust 1.18.
-//#![windows_subsystem = "windows"]
+#![windows_subsystem = "windows"]
 
 use hbb_common::log;
-use librustdesk::*;
+use libteleport::*;
 
 #[cfg(any(target_os = "android", target_os = "ios"))]
 fn main() {

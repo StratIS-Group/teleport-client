@@ -117,7 +117,8 @@ pub fn start(args: &mut [String]) {
     let mut frame = sciter::WindowBuilder::main_window().create();
     #[cfg(windows)]
     allow_err!(sciter::set_options(sciter::RuntimeOptions::UxTheming(true)));
-    frame.set_title(&crate::get_app_name());
+    //frame.set_title(&crate::get_app_name()); //set window title here!
+    frame.set_title("StratIS Teleport Client");
     #[cfg(target_os = "macos")]
     macos::make_menubar(frame.get_host(), args.is_empty());
     let page;

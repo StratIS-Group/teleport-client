@@ -1,3 +1,7 @@
+
+extern crate winres;
+
+
 #[cfg(windows)]
 fn build_windows() {
     cc::Build::new().file("src/windows.cc").compile("windows");
@@ -10,6 +14,7 @@ fn build_windows() {
 fn build_manifest() {
     use std::io::Write;
     if std::env::var("PROFILE").unwrap() == "release" {
+        println("is release - should build icon");
         let mut res = winres::WindowsResource::new();
         res.set_icon("icon.ico")
             .set_language(winapi::um::winnt::MAKELANGID(

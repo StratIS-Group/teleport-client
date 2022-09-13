@@ -108,7 +108,7 @@ def get_rc_features(args):
         os.makedirs(res_dir, exist_ok=True)
         download_extract_features(features, res_dir)
     return ['with_rc'] if features else []
-    
+
 
 def get_features(args):
     features = ['inline']
